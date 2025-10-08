@@ -1,0 +1,10 @@
+{
+    "name": "C++ MQ Container",
+    "image": "chatapp",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-vscode.cpptools"]
+        }   
+    }
+}

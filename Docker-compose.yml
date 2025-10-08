@@ -1,0 +1,23 @@
+services:
+  cpp:
+    build: .
+    container_name: cppdev
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+
+# docker run -it --rm --ipc=host chatapp
+
+## for openning
+# docker compose up -d
+
+## for move to environment for ready compile
+# docker exec -it cppdev bash
+
+## for compile
+# g++ -o server server.cpp -pthread -lrt
+#./server
+
+## for closing
+# docker compose down
