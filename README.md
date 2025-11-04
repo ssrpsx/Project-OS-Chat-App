@@ -20,9 +20,8 @@ Additional features include:
 - ✅ Latency & RTT (Round Trip Time) measurement
 - ❤️ Heartbeat system to monitor connection health
 - ⚙️ Multithreading for concurrent command handling
-
 ---
-
+<br>
 ## 🧩 System Structure
 ### 🖥️ Server
 
