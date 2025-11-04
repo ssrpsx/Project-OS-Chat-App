@@ -35,23 +35,23 @@ Additional features include:
 - Displays message latency (RTT/S2C) using colored output for clarity.
 
 ## Color-Meaning
-🟢 Green-Public message (SAY)
-🟣 Purple-Private message (DM)
-🔵 Blue-RTT of own message
+🟢 Green-Public message (SAY) <br>
+🟣 Purple-Private message (DM) <br>
+🔵 Blue-RTT of own message <br>
 💠 Light Blue-Server-to-Client latency (S2C)
 
 --
 
-📦 project/
- ┣ 📜 Dockerfile
- ┣ 📜 Docker-compose
- ┣ 📂 codes/
- ┃  ┣ 📜 client.cpp
- ┃  ┣ 📜 client-spam-chat.cpp
- ┃  ┣ 📜 server.cpp
- ┃  ┣ 📜 server-no-synchronization.cpp
- ┃  ┗ 📜 header.h
- ┗ 📜 README.md
+📦 project/ <br>
+ ┣ 📜 Dockerfile <br>
+ ┣ 📜 Docker-compose <br>
+ ┣ 📂 codes/ <br>
+ ┃  ┣ 📜 client.cpp <br>
+ ┃  ┣ 📜 client-spam-chat.cpp <br>
+ ┃  ┣ 📜 server.cpp <br>
+ ┃  ┣ 📜 server-no-synchronization.cpp <br>
+ ┃  ┗ 📜 header.h <br>
+ ┗ 📜 README.md <br>
 
 --
 
