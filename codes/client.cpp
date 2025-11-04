@@ -26,8 +26,6 @@ void listen_queue(const std::string &qname)
         buffer[bytes] = '\0';
         std::string msg(buffer);
         auto end_time = std::chrono::system_clock::now(); // เวลาที่ได้รับ
-        
-        std::cout << msg << std::endl;
 
         // 1. ตรวจสอบข้อความ Server (ไม่มี timestamp)
         if (msg.find("[SERVER]") == 0) {
