@@ -37,30 +37,48 @@ Additional features include:
 - Displays message latency (RTT/S2C) using colored output for clarity.
 
 <br>
----
 
 ## 🧠 Core Functionality Overview
 ### 🔹 Server.cpp
 
 - Opens the main message queue /control_q.
-
 - Receives and categorizes client messages into various command types:
 REGISTER, SAY, DM, JOIN, LEAVE, WHO, and BEAT.
-
 - Spawns a new thread to handle each request asynchronously.
-
 - Uses std::mutex to prevent race conditions during shared data access.
-
 - Runs a background reaper_thread() that periodically checks for inactive clients (those who stopped sending heartbeat signals for over 20 seconds) and removes them automatically.
 
 ### 🔹 Client.cpp
 
 - Registers itself with the server (REGISTER).
-
 - Continuously listens for incoming messages through its personal queue (listen_queue).
-
 - Sends chat commands to the server (SAY, JOIN, DM, WHO, LEAVE, QUIT).
-
 - Maintains a heartbeat thread that sends a signal every 5 seconds to keep the connection alive.
-
 - Measures and displays latency (RTT and S2C delay) with different color codes for better visualization.
+
+---
+<br><br>
+<button class="copy-btn" data-target="#docker-run">คัดลอก</button>
+
+# build image
+docker build -t chatapp .
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.copy-btn').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      const target = this.getAttribute('data-target');
+      const el = document.querySelector(target);
+      if (!el) return;
+      const text = el.innerText;
+      navigator.clipboard?.writeText(text).then(()=>{
+        const old = this.innerText;
+        this.innerText = 'คัดลอกแล้ว ✓';
+        setTimeout(()=> this.innerText = old, 1500);
+      }).catch(()=>{
+        alert('ไม่สามารถคัดลอก: เบราว์เซอร์ไม่รองรับ clipboard API');
+      });
+    });
+  });
+});
+</script>
