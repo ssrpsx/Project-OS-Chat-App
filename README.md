@@ -2,7 +2,7 @@
 
 A multi-client text-based chat system written in C++, using POSIX Message Queues (mqueue) for inter-process communication (IPC) between multiple clients and a central server — all at the Operating System level.
 
-## 💡 Project Idea
+## Project Idea
 This project simulates a basic real-time chat system that communicates via POSIX Message Queues instead of traditional network sockets (TCP/IP).
 It demonstrates how processes can interact and synchronize efficiently through OS-level mechanisms.
 
@@ -23,7 +23,7 @@ Additional features include:
 ---
 <br>
 
-## 🧩 System Structure
+## System Structure
 ### 🖥️ Server
 
 - Acts as the central hub for all message queues.
@@ -38,7 +38,7 @@ Additional features include:
 
 <br>
 
-## 🧠 Core Functionality Overview
+## Core Functionality Overview
 ### 🔹 Server.cpp
 
 - Opens the main message queue /control_q.
